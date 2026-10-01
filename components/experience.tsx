@@ -1,13 +1,39 @@
 export default function Experience() {
     const experiences = [
         {
-            company: "Amazon",
-            position: "Area Manager Intern",
+            company: "Amazon · San Diego, CA",
+            position: "Returning Management Intern",
+            period: "Jun. 2026 - Aug. 2026",
+            description:
+                "Built a delivery station dashboard tracking Sub-Same Day (SSD) volume, stow/pick rates, and projected misses.\n" +
+                "Ingested Station Control Center (SCC) and QuickSight feeds with Python and AWS Lambda, using Amazon Bedrock to parse logs into floor-level action items.\n" +
+                "Cut SSD Pareto time by 12% with automated workflows getting Under the Roof managers real-time insights.",
+        },
+        {
+            company: "Engineering Society at UCLA (ESUC) · Los Angeles, CA",
+            position: "Software Engineer & Webmaster",
+            period: "Oct. 2025 - Present",
+            description:
+                "Serve as Webmaster for ESUC, maintaining the organization’s web presence of 800+ MAU total and contributing to UCLA Engineering club and activity pages serving over 6,000 engineering students.\n" +
+                "Develop ESUC Club Finder, a React, Node.js, and MongoDB app for club discovery, filtering, and membership.\n" +
+                "Manage traffic, push maintenance updates, and update DB and hosting configurations for all ESUC sites.",
+        },
+        {
+            company: "Creative Labs · Los Angeles, CA",
+            position: "Software Engineer",
+            period: "Oct. 2025 - Dec. 2025",
+            description:
+                "Built Express.js and MongoDB backend services for Bruin Bites, a UCLA app for local discounts and meals.\n" +
+                "Developed and documented a RESTful API powering post generation, content filtering, and user relationships.\n" +
+                "Oversaw full-stack integration between the Express.js API and React Native client for smooth app deployment.",
+        },
+        {
+            company: "Amazon · Rialto, CA",
+            position: "Management Intern",
             period: "Jun. 2025 - Aug. 2025",
             description:
-                "Designed software for Amazon internal middle mile distribution (ie. fulfillment and sort centers).\n" +
-                "Developed internal data analysis application in Python/Pandas to parse Amazon idle times on RedShift and send site wide automated blasts.\n" +
-                "Wrote scripts to amend internal associates’ Android devices to display live idle time.",
+                "Automated daily and weekly idle time reports in Python from Amazon Redshift operations metrics.\n" +
+                "Built a canceled-move alert on AWS Lambda, API Gateway, and CloudWatch, adopted by 100+ SoCal sites.",
         },
         {
             company: "Effective Altruism @ UCLA",
@@ -38,8 +64,8 @@ export default function Experience() {
     const education = [
         {
             institution: "University of California, Los Angeles",
-            degree: "Bachelor of Science: Math of Computation",
-            period: "2024 - 2027",
+            degree: "Bachelor of Science: Computer Science",
+            period: "2024 - 2028",
         },
         {
             institution: "San Dieguito High School Academy",

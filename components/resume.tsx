@@ -1,3 +1,99 @@
+// Each role or project is stored as data, then drawn by the same JSX below.
+// To edit the resume, change the text in these arrays.
+const experience = [
+    {
+        company: "Amazon",
+        roles: [
+            {
+                title: "Returning Management Intern",
+                location: "San Diego, CA",
+                period: "Jun. 2026 – Aug. 2026",
+                bullets: [
+                    "Built a delivery station dashboard tracking Sub-Same Day (SSD) volume, stow/pick rates, and projected misses.",
+                    "Ingested Station Control Center (SCC) and QuickSight feeds with Python and AWS Lambda, using Amazon Bedrock to parse logs into floor-level action items.",
+                    "Cut SSD Pareto time by 12% with automated workflows getting Under the Roof managers real-time insights.",
+                ],
+            },
+            {
+                title: "Management Intern",
+                location: "Rialto, CA",
+                period: "Jun. 2025 – Aug. 2025",
+                bullets: [
+                    "Automated daily and weekly idle time reports in Python from Amazon Redshift operations metrics.",
+                    "Built a canceled-move alert on AWS Lambda, API Gateway, and CloudWatch, adopted by 100+ SoCal sites.",
+                ],
+            },
+        ],
+    },
+    {
+        company: "Engineering Society at UCLA (ESUC)",
+        roles: [
+            {
+                title: "Software Engineer & Webmaster",
+                location: "Los Angeles, CA",
+                period: "Oct. 2025 – Present",
+                bullets: [
+                    "Serve as Webmaster for ESUC, maintaining the organization’s web presence of 800+ MAU total and contributing to UCLA Engineering club and activity pages serving over 6,000 engineering students.",
+                    "Develop ESUC Club Finder, a React, Node.js, and MongoDB app for club discovery, filtering, and membership.",
+                    "Manage traffic, push maintenance updates, and update DB and hosting configurations for all ESUC sites.",
+                ],
+            },
+        ],
+    },
+    {
+        company: "Creative Labs",
+        roles: [
+            {
+                title: "Software Engineer",
+                location: "Los Angeles, CA",
+                period: "Oct. 2025 – Dec. 2025",
+                bullets: [
+                    "Built Express.js and MongoDB backend services for Bruin Bites, a UCLA app for local discounts and meals.",
+                    "Developed and documented a RESTful API powering post generation, content filtering, and user relationships.",
+                    "Oversaw full-stack integration between the Express.js API and React Native client for smooth app deployment.",
+                ],
+            },
+        ],
+    },
+]
+
+const projects = [
+    {
+        name: "Ballow Fruit Co",
+        tech: "Next.js 16, React, Supabase, Postgres, Pgvector, RAG, Gemini 2.5 Flash, Stripe",
+        bullets: [
+            "Built a live B2C storefront that sustains 500+ MAU for my family’s fruit business, processing 100+ transactions via phone and email a month and raising $10,000+ total for local communities.",
+            "Designed a RAG meal planner that queries 3 pgvector indexes in parallel across recipe, produce, and nutrition data, generating 350+ personalized weekly meal plans from 110+ embedded recipes per month.",
+            "Implemented Supabase Auth with row-level security, real-time inventory tracking with stock decrement on checkout, and order fulfillment via Resend email with Stripe payments in beta.",
+        ],
+    },
+    {
+        name: "LearningHub",
+        tech: "Next.js, Express.js, MongoDB, Google Gemini API, JWT",
+        bullets: [
+            "Best Web App & 2nd Overall at QWERHacks 2026; LMS with role-based dashboards and a context injection pipeline assembling Gemini prompts from live MongoDB data to scope AI quizzes, flashcards, and tutoring.",
+            "Implemented weakness detection engine using DB population chains + grade aggregations from assignments.",
+            "Deployed monorepo with env-conditional JWT and multi-turn Gemini chat reconstruction.",
+        ],
+    },
+    {
+        name: "Night-City Crossy Road",
+        tech: "TypeScript, Three.js, WebGL, GLSL, Web Audio API, Vite",
+        bullets: [
+            "Engineered 3D immersive night simulation of classic crossy road with hi-fi rendering and physics based interaction.",
+            "Authored GLSL shaders for water caustics + Fresnel translucency, sustaining 120 FPS.",
+            "Integrated 3D HRTF spatial audio, AABB collision, and 20 other complex features for enhanced playability.",
+        ],
+    },
+]
+
+const skills = [
+    { label: "Languages", items: "Java, Python, C, C++, SQL, JavaScript, TypeScript, HTML/CSS, Rust, Lua, Ruby, R, Go" },
+    { label: "Frameworks & Runtimes", items: "React, Next.js, Vue, Material-UI, Tailwind, FastAPI, Node.js" },
+    { label: "Developer Tools & IDEs", items: "Git, Docker, GitHub, VS Code, Visual Studio, PyCharm, Eclipse" },
+    { label: "Cloud & Infrastructure", items: "Google Cloud Platform, AWS Lambda, AWS EC2, CloudWatch, Amazon Bedrock, Vercel" },
+]
+
 export default function Resume() {
     return (
         <div className="space-y-8">
@@ -6,117 +102,68 @@ export default function Resume() {
             <div className="border-2 border-[#808080] p-6 bg-[#efefef]">
                 <div className="text-center mb-6">
                     <h1 className="text-2xl font-bold">Carter Ballow</h1>
-                    <a className="text-sm">Encinitas, CA • (760) 525-4955 • carterballow06@g.ucla.edu • carterballow.com • github.com/carterballow • linkedin.com/in/carterballow/</a>
+                    <p className="text-sm">760-525-4955 | me@carterballow.com | linkedin.com/in/carterballow | github.com/carterballow | carterballow.com</p>
                 </div>
 
                 <div className="mb-6">
                     <h2 className="text-lg font-bold border-b border-[#808080] mb-2">EDUCATION</h2>
                     <div className="flex justify-between">
-                        <div>
-                            <p className="font-bold">University of California, Los Angeles</p>
-                            <p>Bachelor of Science Computer Science</p>
-                        </div>
-                        <p>June 2027</p>
+                        <p className="font-bold">University of California, Los Angeles (UCLA)</p>
+                        <p>Sep. 2024 – Jun. 2028</p>
                     </div>
-                    <p className="text-sm mt-1">Major GPA: 4.00 | Cumulative GPA: 3.86</p>
+                    <div className="flex justify-between text-sm">
+                        <p className="italic">B.S. Computer Science | Cumulative GPA: 3.89 | Hispanic Scholarship Fund (HSF) Scholar</p>
+                        <p className="italic">Los Angeles, CA</p>
+                    </div>
                 </div>
 
                 <div className="mb-6">
                     <h2 className="text-lg font-bold border-b border-[#808080] mb-2">EXPERIENCE</h2>
-                    <div className="mb-4">
-                        <div className="flex justify-between">
-                            <p className="font-bold">Area Manager Intern</p>
-                            <p>June 2025 - Aug. 2025</p>
+                    {experience.map((job) => (
+                        <div key={job.company} className="mb-4">
+                            <p className="font-bold">{job.company}</p>
+                            {job.roles.map((role) => (
+                                <div key={role.title} className="mb-2">
+                                    <div className="flex justify-between text-sm">
+                                        <p className="italic">{role.title}</p>
+                                        <p className="italic">{role.location} | {role.period}</p>
+                                    </div>
+                                    <ul className="list-disc pl-5 mt-1 text-sm">
+                                        {role.bullets.map((bullet) => (
+                                            <li key={bullet}>{bullet}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
                         </div>
-                        <p className="italic">Amazon, Rialto, CA</p>
-                        <ul className="list-disc pl-5 mt-1 text-sm">
-                            <li>Designed software for Amazon internal middle mile distribution (ie. fulfillment and sort centers).</li>
-                            <li>Developed internal data analysis application in Python/Pandas to parse Amazon idle times on RedShift and send site wide automated blasts.</li>
-                            <li>Wrote scripts to amend internal associates’ Android devices to display live idle time.</li>
-                            <li>Created and rolled out a workflow to display canceled yard hostler moves from external to internal warehouse teams.</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <div className="flex justify-between">
-                            <p className="font-bold">Research Intern</p>
-                            <p>April 2025 - Current</p>
-                        </div>
-                        <p className="italic">Effective Altruism @ UCLA, Los Angeles, CA</p>
-                        <ul className="list-disc pl-5 mt-1 text-sm">
-                            <li>Explored the role of AI safety, global health, and existential risk through Effective Altruism’s core missions.</li>
-                            <li>Gained a deeper understanding of ethical prioritization, learning to evaluate trade-offs of artificial intelligence.</li>
-                            <li>Attended conventions and seminars to influence and be influenced by thousands of devoted EAs.</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <div className="flex justify-between">
-                            <p className="font-bold">Teaching Assistant Intern</p>
-                            <p>Jan. 2025 - Mar. 2025</p>
-                        </div>
-                        <p className="italic">CalTeach, Los Angeles, CA</p>
-                        <ul className="list-disc pl-5 mt-1 text-sm">
-                            <li>Taught mathematical concepts by providing targeted tutoring and facilitating student problem-solving in classrooms.</li>
-                            <li>Collaborated with local teachers implementing lesson plans designed to enhance students’ quantitative skills.</li>
-                            <li>Planned and executed countless lessons, and reviewed and gave constructive criticism to other instructors.</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-4">
-                        <div className="flex justify-between">
-                            <p className="font-bold">Research Intern</p>
-                            <p>Jan. 2025 - Mar. 2025</p>
-                        </div>
-                        <p className="italic">AI Safety @ UCLA, Los Angeles, CA</p>
-                        <ul className="list-disc pl-5 mt-1 text-sm">
-                            <li>Conducted research on the risks of AI policy levers, and the role of AI in government.</li>
-                            <li>Led research on deep learning and the impacts of it on the future of computer science and the world at large.</li>
-                            <li>Created well researched timelines for artificial existential threat and power seeking tendencies using precedence and scale.</li>
-                        </ul>
-                    </div>
+                    ))}
                 </div>
 
                 <div className="mb-6">
-                    <h2 className="text-lg font-bold border-b border-[#808080] mb-2">SKILLS</h2>
-                    <div className="grid grid-cols-2 gap-4">
-                        <div>
-                            <p className="font-bold">Languages:</p>
-                            <p className="text-sm">Java, Python, C/C++, SQL (Postgres), JS/TS, HTML/CSS</p>
+                    <h2 className="text-lg font-bold border-b border-[#808080] mb-2">PROJECTS</h2>
+                    {projects.map((project) => (
+                        <div key={project.name} className="mb-3">
+                            <p>
+                                <span className="font-bold">{project.name}</span>
+                                <span className="italic text-sm"> | {project.tech}</span>
+                            </p>
+                            <ul className="list-disc pl-5 mt-1 text-sm">
+                                {project.bullets.map((bullet) => (
+                                    <li key={bullet}>{bullet}</li>
+                                ))}
+                            </ul>
                         </div>
-                        <div>
-                            <p className="font-bold">Frameworks & Runtimes:</p>
-                            <p className="text-sm">React, Next.js, Vue, Material-UI, Tailwind, FastAPI, Node.js</p>
-                        </div>
-                        <div>
-                            <p className="font-bold">Developer Tools & IDEs:</p>
-                            <p className="text-sm">Git, Docker, GitHub, VS Code, Visual Studio, PyCharm, Eclipse</p>
-                        </div>
-                        <div>
-                            <p className="font-bold">Cloud & Infrastructure:</p>
-                            <p className="text-sm">Google Cloud Platform, AWS Lambda, AWS EC2, CloudWatch, Vercel</p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 <div>
-                    <h2 className="text-lg font-bold border-b border-[#808080] mb-2">PROJECTS</h2>
-
-                    <div className="mb-2">
-                        <p className="font-bold">Hot Takes | React, MongoDB, Node.js, Next.js, Google Gemini API, JavaScript, Tailwind</p>
-                        <ul className="list-disc pl-5 mt-1 text-sm">
-                            <li>Ranked 1st in Web category at annual UCLA hackathon Hack on the Hill.</li>
-                            <li>Created a full-stack debate platform enabling users to engage in real-time discussions on controversial topics.</li>
-                            <li>Leveraged Google’s Gemini API to provide AI-driven feedback on arguments, detecting 100+ types of logical fallacies.</li>
-                        </ul>
-                    </div>
-
-                    <div className="mb-2">
-                        <p className="font-bold">Ballow Fruit Co | HTML, TypeScript, React, Git, Redux, Tailwind, Postgres</p>
-                         <ul className="list-disc pl-5 mt-1 text-sm">
-                            <li>Architected and developed the website’s back-end, creating a secure system for taking online orders for my local non-profit.</li>
-                            <li>Built and deployed a responsive, user-friendly front-end to effectively showcase the non-profit's mission and products.</li>
-                        </ul>
+                    <h2 className="text-lg font-bold border-b border-[#808080] mb-2">TECHNICAL SKILLS</h2>
+                    <div className="space-y-1 text-sm">
+                        {skills.map((skill) => (
+                            <p key={skill.label}>
+                                <span className="font-bold">{skill.label}:</span> {skill.items}
+                            </p>
+                        ))}
                     </div>
                 </div>
             </div>

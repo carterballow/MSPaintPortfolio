@@ -7,16 +7,16 @@ export default function Projects() {
         technologies: ["React", "Node.js", "MongoB"],
       },
       {
-        title: "Basic Portfolio",
-        description: "First attempt at a personal portfolio website built using fundamental web technologies: HTML, CSS, and JavaScript. Features sections for my skills, projects, and contact information.",
-        image: "/portfolio1.png?height=150&width=250",
-        technologies: ["JavaScript", "HTML", "CSS"],
+        title: "Ballow Fruit Co",
+        description: "A live storefront for my family's fruit business with 500+ monthly users, 100+ orders a month, and $10,000+ raised for local communities. Includes a RAG meal planner that searches recipe, produce, and nutrition data to build personalized weekly meal plans.",
+        image: "/ballowfruitco.png?height=150&width=250",
+        technologies: ["Next.js", "Supabase", "Postgres", "Pgvector", "Gemini", "Stripe"],
       },
       {
-        title: "React Portfolio",
-        description: "Built a portfolio website to learn how to incorporate React for better front end development and enhanced user interface and routes rather than one static page.",
-        image: "/portfolio2.png?height=150&width=250",
-        technologies: ["React", "JavaScript", "Figma"],
+        title: "LearningHub",
+        description: "Best Web App and 2nd Overall at QWERHacks 2026. A learning management system with role-based dashboards that feeds live class data into Gemini to create quizzes, flashcards, and tutoring, plus a weakness detection engine built from assignment grades.",
+        image: "/learninghub.png?height=150&width=250",
+        technologies: ["Next.js", "Express.js", "MongoDB", "Gemini API", "JWT"],
       },
       {
         title: "MS Paint Clone",
@@ -31,10 +31,10 @@ export default function Projects() {
         technologies: ["Lua", "Roblox Studio", "HTML"],
       },
       {
-        title: "Weather App",
-        description: "COMING SOON...",
-        image: "/weatherapp.png?height=150&width=250",
-        technologies: ["tbd", "tbd", "tbd"],
+        title: "Night-City Crossy Road",
+        description: "A 3D night-time take on classic Crossy Road with high-fidelity rendering and physics. Custom GLSL shaders for water caustics and Fresnel translucency run at 120 FPS, alongside 3D spatial audio and AABB collision.",
+        image: "/crossyroad.png?height=150&width=250",
+        technologies: ["TypeScript", "Three.js", "WebGL", "GLSL", "Web Audio API", "Vite"],
       },
     ]
   
